@@ -1,13 +1,14 @@
 import Link from "next/link";
-import styles from "../page.module.css";
+import styles from "./speak.module.css";
+import TopBar from "./TopBar";
 
-export default function SpeakPage() {
+export default function HomePage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Speak Page</h1>
-        <p>This is where you can practice speaking.</p>
-        <Link href="/">Back to Main</Link>
+        <div className={styles.phoneScreen}>
+          <TopBar topic="Greetings" level="1"/>
+        </div>
       </main>
     </div>
   );
