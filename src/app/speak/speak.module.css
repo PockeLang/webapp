@@ -188,6 +188,7 @@ a.secondary {
   border-radius: 5px;
   width: 100%;
   padding: 10px;
+  max-height: 10%;
   background-color: #f0f0f0;
   border-bottom: 1px solid #ddd;
 }
@@ -219,17 +220,24 @@ a.secondary {
 }
 
 .conversationContainer {
-  flex-grow: 1;
+  margin-top: 10px;
+  height: 80%;
   overflow-y: auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.conversationContainer::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
 .bubble {
   max-width: 70%;
-  padding: 10px 15px;
-  border-radius: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
   margin-bottom: 10px;
   word-wrap: break-word;
   font-size: 14px;
@@ -244,3 +252,33 @@ a.secondary {
   align-self: flex-start;
   background-color: #ffffff;
 }
+
+.microphoneButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.microphoneButton:hover {
+  background-color: #25a519;
+}
+
+@keyframes pulsate {
+  0% { background-color: #D94141; }
+  50% { background-color: #F9AFB6; }
+  100% { background-color: #D94141; }
+}
+
+.microphoneButton:active {
+  animation: pulsate 2s infinite;
+}
+

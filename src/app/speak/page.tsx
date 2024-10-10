@@ -1,9 +1,10 @@
 import styles from "./speak.module.css";
 import TopBar from "./TopBar";
 import ConversationBubble from "./ConversationBubble";
+import MicrophoneButton from "./MicrophoneButton";
 
 export default function HomePage() {
-  const conversations = [
+  let conversations = [
     { text: "Hello! How are you?", isUser: false },
     { text: "I'm doing well, thanks for asking!", isUser: true },
     {
@@ -13,6 +14,7 @@ export default function HomePage() {
     { text: "I'm planning to go for a walk in the park.", isUser: true },
     { text: "That sounds lovely. Enjoy your walk!", isUser: false },
   ];
+  conversations = conversations.concat(conversations);
 
   return (
     <div className={styles.page}>
@@ -28,6 +30,7 @@ export default function HomePage() {
               />
             ))}
           </div>
+          <MicrophoneButton />
         </div>
       </main>
     </div>
