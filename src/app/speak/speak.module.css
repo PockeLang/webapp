@@ -171,7 +171,7 @@ a.secondary {
   overflow: auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to bottom, #F9AFB6, #FFF1C2);
+  background: linear-gradient(to bottom, #f9afb6, #fff1c2);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -185,6 +185,7 @@ a.secondary {
 .topBar {
   display: flex;
   align-items: flex-end;
+  border-radius: 5px;
   width: 100%;
   padding: 10px;
   background-color: #f0f0f0;
@@ -215,4 +216,31 @@ a.secondary {
   font-weight: bold;
   margin: 0;
   line-height: 1;
+}
+
+.conversationContainer {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.userBubble {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.botBubble {
+  align-self: flex-start;
+  background-color: #ffffff;
 }
