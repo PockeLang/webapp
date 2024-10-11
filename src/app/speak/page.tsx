@@ -5,14 +5,27 @@ import MicrophoneButton from "./MicrophoneButton";
 
 export default function HomePage() {
   let conversations = [
-    { text: "Hello! How are you?", isUser: false },
-    { text: "I'm doing well, thanks for asking!", isUser: true },
+    { text: "Hello! How are you?", isUser: false, translation: "안녕하세요. 오늘 날" },
+    {
+      text: "I'm doing well, thanks for asking!",
+      isUser: true,
+      translation: "안녕하세요. 오늘 날",
+    },
     {
       text: "That's great to hear. What are your plans for today?",
       isUser: false,
+      translation: "안녕하세요. 오늘 날",
     },
-    { text: "I'm planning to go for a walk in the park.", isUser: true },
-    { text: "That sounds lovely. Enjoy your walk!", isUser: false },
+    {
+      text: "I'm planning to go for a walk in the park.",
+      isUser: true,
+      translation: "안녕하세요. 오늘 날",
+    },
+    {
+      text: "That sounds lovely. Enjoy your walk!",
+      isUser: false,
+      translation: "안녕하세요. 오늘 날",
+    },
   ];
   conversations = conversations.concat(conversations);
 
@@ -27,6 +40,7 @@ export default function HomePage() {
                 key={index}
                 text={conv.text}
                 isUser={conv.isUser}
+                translation={conv.translation}
               />
             ))}
           </div>

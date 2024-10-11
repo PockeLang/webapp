@@ -189,7 +189,7 @@ a.secondary {
   width: 100%;
   padding: 10px;
   max-height: 10%;
-  background-color: #f0f0f0;
+  background-color: #FFF8D6;
   border-bottom: 1px solid #ddd;
 }
 
@@ -282,3 +282,9 @@ a.secondary {
   animation: pulsate 2s infinite;
 }
 
+.translation {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  line-height: 1;
+}
